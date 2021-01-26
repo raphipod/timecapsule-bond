@@ -31,4 +31,4 @@ sleep 2
 
 echo "\nTrying to connect to TimeCapsule..."
 
-sudo mount.cifs //$(ip_addr)/$(hdd_name) /mnt/timecapsule -o user=$(username),sec=ntlm,vers=1.0
+sudo mount.cifs //$ip_addr/$hdd_name /mnt/timecapsule -o user=$username,sec=ntlm,vers=1.0
