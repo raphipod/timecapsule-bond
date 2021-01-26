@@ -9,26 +9,26 @@
 
 sudo apt-get install cifs-utils && smbclient && smbfs -y
 
-echo -e "\nInstalled necessary components."
+echo "\nInstalled necessary components."
 
 sleep 5
 
-echo -e "\nIP address of TimeCapsule?"
+echo "\nIP address of TimeCapsule?"
 
-read ip
+read ip_addr
 
-echo -e "\nName of shared drive?"
+echo "\nName of shared drive?"
 
 read hdd_name
 
 sudo mkdir /mnt/timecapsule
 
-echo -e "\nUsername of TimeCapsule?"
+echo "\nUsername of TimeCapsule?"
 
 read username
 
 sleep 2
 
-echo -e "\nTrying to connect to TimeCapsule..."
+echo "\nTrying to connect to TimeCapsule..."
 
-sudo mount.cifs //$(ip)/$(hdd_name) /mnt/timecapsule -o user=$(username),sec=ntlm,vers=1.0
+sudo mount.cifs //$(ip_addr)/$(hdd_name) /mnt/timecapsule -o user=$(username),sec=ntlm,vers=1.0
