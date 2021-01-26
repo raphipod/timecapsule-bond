@@ -7,7 +7,7 @@
 # Copyright (C) 2021, Raphipod
 ##################################
 
-sudo apt-get install cifs-utils && smbclient && smbfs -y
+sudo apt-get install cifs-utils -y
 
 echo "\nInstalled necessary components."
 
